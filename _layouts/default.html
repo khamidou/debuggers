@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/gridiculous.css">
         <link rel="stylesheet" href="/css/syntax.css">
 
         <!-- Custom CSS -->
@@ -14,21 +15,25 @@
 
     </head>
     <body>
+        <div class="grid w960">
+          <div class="header row">
+         </div>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">Debugging stories from the trenches</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                A <a href="http://khamidou.com">Khamidou</a> snafu.
-              </p>
-            </div>
+          <div class="row">
+              <div class="c4 leftCol">
+                  <h2>Debuggers</h2>
+                  <p>
+                      Debuggers is a blog about interesting bugs. Once a week, a programmer tells the story of one bug he had to fix.
+                  </p>
+                  <ul>
+                      <li><a href="/home.html">Home</a></li>
+                      <li><a href="/archives.html">Archives</a></li>
+                  </ul>
+                  <p>Edited by <a href="http://khamidou.com">Karim Hamidou</a>.</p>
+              </div>
+              <div class="c8 rightCol">
+                  {{ content }}
+              </div>
           </div>
         </div>
 

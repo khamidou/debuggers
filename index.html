@@ -1,13 +1,20 @@
 ---
 layout: default
-title: Of Bugs And Fixes
+title: Debuggers
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <div class="post">
+        <a href="{{ post.url }}"><h1>{{ post.title}}</h1></a>
+        <img src="{{ post.image }}"></img>
+        {% if post.content contains '<!-- more -->' %}
+            {{ post.content | split :'<!-- more -->' | first }}
+        {% endif %}
+        <a href="{{ post.url }}">More...</a>
+    </div>
+    <hr>
     {% endfor %}
   </ul>
 </div>
