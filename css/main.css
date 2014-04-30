@@ -14,7 +14,6 @@ html, body { min-height: 100%; }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: #F4F3DD; /* Old browsers */
   color: #292929;
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 }
@@ -43,15 +42,15 @@ a:visited { color: #707070; }
   line-height: 1.75em;
 }
 
-.posts span {
+.meta {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
 
 .posts img, .post img {
   margin-left: 0px;
   border: 1px solid #292929;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -94,10 +93,6 @@ a:visited { color: #707070; }
 
 .header a.extra:hover {
   color: #000;
-}
-
-.meta {
-  color: #aaa;
 }
 
 .footer {
@@ -175,4 +170,11 @@ a:visited { color: #707070; }
 
 .leftCol ul {
     list-style-type: none;
+}
+
+span .cat {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
 }

@@ -1,3 +1,5 @@
 name: Debuggers
-markdown: redcarpet
+markdown: kramdown
+baseurl: http://debuggers.co
 pygments: true
+permalink: date

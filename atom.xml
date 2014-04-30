@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Debuggers</title>
+  <link href="http://debuggers.co/"/>
+  <link type="application/atom+xml" rel="self" href="http://debuggers.co/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://debuggers.co/</id>
+  <author>
+    <name>Karim Hamidou</name>
+    <email>contact@debuggers.co</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://debuggers.co{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://debuggers.co{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Karim Hamidou</name>
+      <uri>http://debuggers.co/</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>
