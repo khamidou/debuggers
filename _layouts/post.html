@@ -10,7 +10,8 @@ layout: default
     <span class="cat">{{ cat }}</span>
     {% endfor %}
 </span>
-
-{{ content }}
+{% if content contains '<!-- more -->' %}
+    {{ content | split :'<!-- more -->' | last }}
+{% endif %}
 
 </div>
