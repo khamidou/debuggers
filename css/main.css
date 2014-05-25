@@ -105,8 +105,6 @@ h2 a:visited { color: #292929; }
 }
 
 .post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .4em;
 }
 
@@ -116,8 +114,6 @@ h2 a:visited { color: #292929; }
 }
 
 .post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .2em;
 }
 
