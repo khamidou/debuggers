@@ -15,6 +15,7 @@ html, body { min-height: 100%; }
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #292929;
+  background-color: #e0e0e0;
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 }
 
@@ -46,13 +47,17 @@ h2 a:visited { color: #292929; }
 }
 
 .meta {
-  color: #aaa;
-  font-size: 80%;
+  color: #999;
+  font-size: 90%;
+}
+
+.authorPic {
+  border: 1px solid #777;
+  border-radius: 3px;
 }
 
 .posts img, .post img {
   margin-left: 0px;
-  border: 1px solid #292929;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -63,68 +68,6 @@ h2 a:visited { color: #292929; }
 /*
 /*****************************************************************************/
 
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
-}
-
-.header a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
-
-.title a {
-  color: #a00;
-}
-
-.title a:hover {
-  color: #000;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
-
 /*****************************************************************************/
 /*
 /* Posts
@@ -132,6 +75,33 @@ h2 a:visited { color: #292929; }
 /*****************************************************************************/
 
 /* standard */
+.post {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 1px #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post .title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.post .title a  {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #292929;
+}
+
+.post .title a:visited  {
+  color: #292929;
+}
+
+.post .meta {
+  margin-bottom: 10px;
+}
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
@@ -163,8 +133,12 @@ h2 a:visited { color: #292929; }
   background-color: #333;
 }
 
-.rightCol {
-    background-color: #fff;
+.leftCol {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 1px #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .leftCol h2 {
@@ -175,9 +149,14 @@ h2 a:visited { color: #292929; }
     list-style-type: none;
 }
 
-span .cat {
+.rightCol {
+}
+
+
+.cat {
     border: 1px solid #ccc;
     border-radius: 3px;
     padding-left: 3px;
     padding-right: 3px;
+    box-shadow: 0px 0.5px #ccc;
 }
