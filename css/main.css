@@ -85,18 +85,18 @@ h2 a:visited { color: #292929; }
   margin-bottom: 20px;
 }
 
-.post .title {
+.post h1 {
   margin-top: 0px;
   margin-bottom: 0px;
-}
-
-.post .title a  {
   font-size: 1.2em;
-  text-decoration: none;
   color: #292929;
 }
 
-.post .title a:visited  {
+.post h1 a  {
+  text-decoration: none;
+}
+
+.post h1 a:visited  {
   color: #292929;
 }
 
@@ -112,6 +112,7 @@ h2 a:visited { color: #292929; }
 
 .post ul, .post ol {
   margin-left: 1.35em;
+  margin-bottom: 20px;
 }
 
 .post code {

@@ -2,7 +2,11 @@
 layout: default
 ---
 <div class="post">
+
+{% if page.image %}    
 <img class="authorPic" src="{{ page.image }}"></img>
+{%endif %}
+
 <h1 class="title"><a href="{{page.url}}">{{ page.title }}</a></h1>
 <div class="meta">Posted: {{ page.date | date_to_string }}. 
     Filed under: {% for cat in page.categories %}
