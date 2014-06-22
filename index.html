@@ -7,16 +7,30 @@ title: Debuggers
   <ul class="posts">
     {% for post in site.posts %}
     <div class="post">
-        <img class="authorPic" src="{{ post.image }}"></img>
-        <h1 class="title"><a href="{{ post.url }}">{{ post.title}}</a></h1>
-        {% if post.content contains '<!-- more -->' %}
-            {{ post.content | split :'<!-- more -->' | first }}
+        {% if post.link %}
+        <div class="linkPost">
+             <h1 class="title"><a href="{{ post.link }}">{{ post.title}}</a></h1>
+             {{ post.content }}
+        </div>
+        {% else %}
+        <div class="textPost">
+            {% if post.image %}
+                <img class="authorPic" src="{{ post.image }}"></img>
+            {% endif %}
+
+            <h1 class="title"><a href="{{ post.url }}">{{ post.title}}</a></h1>
+
+            {% if post.content contains '<!-- more -->' %}
+                {{ post.content | split :'<!-- more -->' | first }}
+            {% endif %}
+        </div>
         {% endif %}
         <span class="meta">Posted: {{ post.date | date_to_string }}. 
             Filed under: {% for cat in post.categories %}
             <span class="cat">{{ cat }}</span>
             {% endfor %}
         </span>
+
     </div>
     {% endfor %}
   </ul>

@@ -92,6 +92,14 @@ h2 a:visited { color: #292929; }
   color: #292929;
 }
 
+.post .linkPost h1 {
+    margin-top: 10px;
+}
+
+.post .linkPost a {
+    text-decoration: underline; 
+}
+
 .post h1 a  {
   text-decoration: none;
 }
@@ -119,6 +127,12 @@ h2 a:visited { color: #292929; }
 
 .post pre code {
   border: none;
+}
+
+.post blockquote {
+    border-left: 3px solid #525252;
+    padding-left: 10px;
+    font-style: italic;
 }
 
 /* terminal */
@@ -159,3 +173,5 @@ h2 a:visited { color: #292929; }
     padding-right: 3px;
     box-shadow: 0px 0.5px #ccc;
 }
+
+
