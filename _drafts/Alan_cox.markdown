@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Alan Cox on porting Linux to the m68k
+categories: linux c asm
+link: http://www.mac.linux-m68k.org/docs/macpaper.php
+---
+[Alan Cox tells the story of how he ported Linux to the m68k Macintosh](http://www.mac.linux-m68k.org/docs/macpaper.php).
+
+> This is when I first learned the horrors of the Mac. 
+> While Unix says 'Im sorry you can't do that', MacOS has two error messages. It either goes 'eep?' or the box you wanted to set but couldn't is simply not there on you computer until you've installed the other 12 unidenfied items and filled in 3 apparently unrelated dialog boxes. This was an error of the latter category.
