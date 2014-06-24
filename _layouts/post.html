@@ -2,19 +2,29 @@
 layout: default
 ---
 <div class="post">
+    {% if page.image %}    
+    <img class="authorPic" src="{{ page.image }}"></img>
+    {%endif %}
 
-{% if page.image %}    
-<img class="authorPic" src="{{ page.image }}"></img>
-{%endif %}
+    {% if page.link %}
+        <div class="linkPost">
+            <h1 class="title"><a href="{{ page.link }}">{{ page.title}}</a> <a href="{{ page.url }}" title="Permalink">∞</a></h1>
+             {{ post.content }}
+        </div>
+    {% else %}
+        <h1 class="title"><a href="{{page.url}}">{{ page.title }}</a></h1>
+    {% endif %}
 
-<h1 class="title"><a href="{{page.url}}">{{ page.title }}</a></h1>
-<div class="meta">Posted: {{ page.date | date_to_string }}. 
-    Filed under: {% for cat in page.categories %}
-    <span class="cat">{{ cat }}</span>
-    {% endfor %}
-</div>
-{% if content contains '<!-- more -->' %}
-    {{ content | split :'<!-- more -->' | last }}
-{% endif %}
-
+    <div class="meta">Posted: {{ page.date | date_to_string }}. 
+        Filed under: {% for cat in page.categories %}
+        <span class="cat">{{ cat }}</span>
+        {% endfor %}
+    </div>
+    {% if page.link %}
+        {{ content }}
+    {% else %}
+        {% if content contains '<!-- more -->' %}
+            {{ content | split :'<!-- more -->' | last }}
+        {% endif %}
+    {% endif %}
 </div>
