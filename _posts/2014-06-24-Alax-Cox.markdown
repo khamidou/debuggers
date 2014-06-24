@@ -2,6 +2,7 @@
 layout: post
 title:  Alan Cox on porting Linux to the m68k
 categories: linux c asm
+date:   2014-06-24 08:08:21
 link: http://www.mac.linux-m68k.org/docs/macpaper.php
 ---
 [Alan Cox tells the story of how he ported Linux to the m68k Macintosh](http://www.mac.linux-m68k.org/docs/macpaper.php).
