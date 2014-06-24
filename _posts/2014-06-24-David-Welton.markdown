@@ -5,7 +5,7 @@ categories: C Tcl
 date:   2014-06-24 08:05:21
 image: /images/david.welton.jpg
 ---
-David Welton is a programmer and entrepreneur from Padova, Italy.
+[David Welton](http://welton.it/davidw) is a programmer and entrepreneur from Padova, Italy.
 
 <!-- more -->
 
