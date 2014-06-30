@@ -23,6 +23,7 @@ title: Debuggers
             {% if post.content contains '<!-- more -->' %}
                 {{ post.content | split :'<!-- more -->' | first }}
             {% endif %}
+            <a href="{{ post.url }}">Read more...</a>
         </div>
         {% endif %}
         <span class="meta">Posted: {{ post.date | date_to_string }}. 
