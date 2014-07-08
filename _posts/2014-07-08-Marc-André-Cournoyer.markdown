@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Marc-André Cournoyer
-categories: C Asm
+categories: Javascript Asm
 date:   2014-07-08
 image: /images/ma.cournoyer.jpg
 ---
