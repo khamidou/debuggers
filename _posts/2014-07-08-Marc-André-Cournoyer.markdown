@@ -27,7 +27,7 @@ However, some of those instructions also play with the `pc`. One in particular i
 
 Here's the bug. Remember from earlier, I was incrementing the `pc` right after executing an instruction. That means each time an `if` was executed the VM would jump to a memory address **+ 2**. Two bytes too far.
 
-The solution was to increment the `pc` before executing the instruction: https://github.com/greatcodeclub/chip8/blob/master/vm.js#L37.
+The solution was to increment the `pc` before executing the instruction: [https://github.com/greatcodeclub/chip8/blob/master/vm.js#L37](https://github.com/greatcodeclub/chip8/blob/master/vm.js#L37).
 
 # Anything else to add?
 
