@@ -1,5 +1,6 @@
 name: Debuggers
 markdown: kramdown
 baseurl: http://debuggers.co
-pygments: true
+highlighter: pygments
+highlight_prefix: pygments_
 permalink: date
