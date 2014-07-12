@@ -28,15 +28,6 @@ I used Go for all three.
 <p>
 <h1 id="whats-the-most-interesting-bug-youve-met">What’s the most interesting bug you’ve met?</h1>
 
-<style>
-.post code {
-    padding: 0 0 !important;
-}
-.post pre {
-    line-height: normal !important;
-}
-</style>
-
 <p>
 To me, the most interesting bugs are the ones that reveal fundamental, subtle misunderstandings about the way a program works.
 A good bug is like a good science experiment:
