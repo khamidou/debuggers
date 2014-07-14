@@ -7,6 +7,8 @@ image: /images/brent.simmons.jpg
 Russ Cox works at Google on the Go programming language. He previously worked at Bell Labs where he contributed to Plan9.
 
 <!-- more -->
+<h1 id="who-are-you">Who are you?</h1>
+
 <p>
 I&rsquo;m a programmer.
 
@@ -109,9 +111,7 @@ marked <i>locked</i> and must now decide what to do.
 The first, simplest approach, is to try again, and again, and again.
 Eventually thread A will release the lock (by marking the core <i>unlocked</i>),
 at which point thread B&rsquo;s atomic operation will succeed.
-This approach is called spinning, and a lock using this approach is called a spin lock.
-Spinning only makes sense if the lock is never held for very long,
-so that B&rsquo;s spin loop only executes a small number of times.
+This approach is called spinning, and a lock using this approach is called a <a href="http://en.wikipedia.org/wiki/Spinlock">spin lock</a>.
 
 <p>
 A simple spin lock implementation looks like:
@@ -143,6 +143,12 @@ The spin lock&rsquo;s core is the <code>bit</code> field.
 It is 0 or 1 to indicate unlocked or locked.
 The <code>atomic_cmp_and_set</code> and <code>atomic_set</code>
 use special machine instructions to manipulate <code>lk->bit</code> atomically.
+
+<p>
+Spinning only makes sense if the lock is never held for very long,
+so that B&rsquo;s spin loop only executes a small number of times.
+If the lock can be held for longer periods of time, spinning while it is held
+wastes CPU and can interact badly with the operating system scheduler.
 
 <p>
 The second, more general approach is to maintain a queue of threads interested in acquiring the lock.
@@ -307,4 +313,4 @@ What did they learn? Wilkes later recalled,
 <p>
 For more about this early history, see Brian Hayes&rsquo;s &ldquo;<a href="http://bit-player.org/wp-content/extras/bph-publications/Sciences-1993-07-Hayes-EDSAC.pdf">The Discovery of Debugging</a>&rdquo;
 and Martin Campbell-Kelly&rsquo;s &ldquo;<a href="http://dx.doi.org/10.1109/85.194051">The Airy Tape: An Early Chapter in the History of Debugging</a>.&rdquo;
- 
+
