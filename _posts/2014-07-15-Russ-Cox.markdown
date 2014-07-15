@@ -2,7 +2,7 @@
 layout: post
 title:  Russ Cox
 categories: concurrency c systems-programming
-image: /images/brent.simmons.jpg
+image: /images/russ.cox.jpg
 ---
 Russ Cox works at Google on the Go programming language. He previously worked at Bell Labs where he contributed to Plan9.
 
