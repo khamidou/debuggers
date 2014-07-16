@@ -59,18 +59,18 @@ waits for an acknowledgement from W, and then frees the per-client structure.
 <p>
 To acknowledge the disconnect, W ran code like:
 
-{% highlight c %}
+<pre>
 qlock(&conn->lk);
 conn->writer_done = 1;
 qsignal(&conn->writer_ack);
 qunlock(&conn->lk);
 thread_exit();
-{% endhighlight %}
+</pre>
 
 <p>
 And to wait for the acknowledgement, R ran code like:
 
-{% highlight c %}
+<pre>
 qlock(&conn->lk);
 while(!conn->writer_done)
     qwait(&conn->writer_ack);
@@ -78,7 +78,7 @@ while(!conn->writer_done)
 // The writer is done, and so are we:
 // free the connection.
 free(conn);
-{% endhighlight %}
+</pre>
 
 <p>
 This is a standard locks and condition variables piece of code:
@@ -116,7 +116,7 @@ This approach is called spinning, and a lock using this approach is called a <a 
 <p>
 A simple spin lock implementation looks like:
 
-{% highlight c %}
+<pre>
 struct SpinLock
 {
     int bit;
@@ -136,7 +136,7 @@ spinunlock(SpinLock *lk)
 {
     atomic_set(&lk->bit, 0);
 }
-{% endhighlight %}
+</pre>
 
 <p>
 The spin lock&rsquo;s core is the <code>bit</code> field.
@@ -163,7 +163,7 @@ Queueing is more efficient than spinning when the lock may be held for a long ti
 The queue lock&rsquo;s queue needs its own lock, almost always a spin lock.
 In the library I was using, <code>qlock</code> and <code>qunlock</code> were implemented as:
 
-{% highlight c %}
+<pre>
 struct QLock
 {
     SpinLock spin;
@@ -197,7 +197,7 @@ qunlock(QLock *lk)
         os_wakeup(t);
     spinunlock(&lk->spin);
 }
-{% endhighlight %}
+</pre>
 
 <p>
 The queue lock&rsquo;s core is the <code>owner</code> field.
