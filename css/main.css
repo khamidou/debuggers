@@ -182,4 +182,6 @@ h2 a:visited { color: #292929; }
     box-shadow: 0px 0.5px #ccc;
 }
 
-
+a.important {
+    color: #c1272D;
+}
