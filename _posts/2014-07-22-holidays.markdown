@@ -1,0 +1,9 @@
+---
+layout: post
+title:  Holidays!
+categories: linux c asm
+link: http://blog.valerieaurora.org/2013/12/17/heres-my-favorite-operating-systems-war-story-whats-yours/
+---
+The blog is in holidays for the next couple weeks. In the meantime, here's a cool debugging story from elsewhere:
+
+[Valerie Aurora on debugging Linux on the gemini architecture.](http://blog.valerieaurora.org/2013/12/17/heres-my-favorite-operating-systems-war-story-whats-yours/)
